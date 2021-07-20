@@ -3,6 +3,7 @@ import java.util.Date;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+//Bank class containes all the methods for each services
 public class Bank {
 	int acc_no;  
 	String name;  
@@ -15,6 +16,7 @@ public class Bank {
 		amount=f;
 		bank=ba;
 	}
+	//CreateAccount will ask for the required details and will create the new account
 	void CreateAccount(){
 		Scanner ss=new Scanner(System.in);
 		System.out.println("Enter Account Holder Name: ");
@@ -44,6 +46,7 @@ public class Bank {
 		System.out.println("\nMinimum balance required is 1000....Please Deposite the Amount...");
 		Deposit();
 		}
+	//CheckBalance will return the balance amount left 
 	void CheckBalance() {
 		System.out.println("Balance Amount : " + amount);
 		try {
@@ -53,6 +56,7 @@ public class Bank {
 			e.printStackTrace();
 		}
 	}
+	//Deposit will ask for the amount to deposit and add it to the balance amount
 	void Deposit() {
 		Scanner ss=new Scanner(System.in);
 		System.out.println("Enter Amount to Deposit: ");
@@ -71,6 +75,7 @@ public class Bank {
 			e.printStackTrace();
 		}
 	}
+	//Deposit will ask for the amount to withdraw and minimize it from the balance amount
 	void Withdraw() {
 		Scanner ss=new Scanner(System.in);
 		System.out.println("Enter Amount to withdraw: ");
@@ -99,6 +104,7 @@ public class Bank {
 			e.printStackTrace();
 		}
 	}
+	//PrintReceipt is getting invoked after deposit and withdraw..it will print date, brnach, acc.no and balance
 	void PrintReceipt() {
 		System.out.println("***RECEIPT***");
 		Date date=new Date();
@@ -115,6 +121,7 @@ public class Bank {
 			e.printStackTrace();
 		}
 	}
+	//Details method will print all the details abount the account holder
 	void Details() {
 		System.out.println("Bank Name : " + bank);
 		System.out.println("Account Holder name : " + name);
