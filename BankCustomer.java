@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
+//BankCustomer is the interface for customers..
 public class BankCustomer {
 	
+	//printOptions will display all the services as options
 	public static int printOptions(){
 		System.out.println("***WELCOME TO SBI BANK SERVICES***");
 		System.out.println("Select the services from below options!!");
@@ -16,7 +18,7 @@ public class BankCustomer {
 		int i=sc.nextInt();
 		return i;
 	}
-
+	//main method is creating an object of Bank class and calling each method according to the choice from customer
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int choice;
